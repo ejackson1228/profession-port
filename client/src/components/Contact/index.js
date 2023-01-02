@@ -3,9 +3,18 @@ import { validateEmail } from '../../utils/helpers';
 import axios from 'axios';
 
 function Contact() {
-    const [ formState, setFormState ] = useState({ name: '', email: '', message: ''});
-    const { name, email, message } = formState;
+    const formState = {
+        name: "",
+        email: "",
+        message: ""
+    }
+    const [ { name, email, message }, setFormState ] = useState(formState);
     const [errorMessage, setErrorMessage] = useState('');
+    const [confirmationMessage, setConfirmationMessage] = useState('');
+    
+    const clearForm = () => {
+        setFormState({...formState, name: '', email: '', message: ''});
+    }
 
     function handleChange(e) {
         if(e.target.name === 'email') {
@@ -30,6 +39,8 @@ function Contact() {
         }
     };
 
+    
+
     async function submitHandler(e) {
         e.preventDefault();
         try {
@@ -43,30 +54,31 @@ function Contact() {
                 }
             }).then((response) => {
                 if(response.data.status === 'success') {
-                    alert('Message Sent!');
-                    setFormState({...formState, name: '', email: '', message: ''})
+                    alert('Message Sent!')
                 } else if (response.data.status === 'fail') {
                     alert('Message Failed to send.')
-                }
+                } 
             })
         } catch (error) {
             console.log(error);
         }
+
+        clearForm();
     }
 
     return(
        <div className="container col-md-3 contact">
         <h2 className="contact-header">Contact Me!</h2>
         <form id="contactform" className="contact-form" onSubmit={submitHandler}>
-            <div className="form-group" key={setFormState.name}>
+            <div className="form-group" key='username'>
                 <label htmlFor="name">Name:</label>
                 <input className="form-control" type="text" name="name" defaultValue={name} onBlur={handleChange}></input>
             </div>
-            <div className="form-group" key={setFormState.email}>
+            <div className="form-group" key='userEmail'>
                 <label htmlFor="email">Email Address:</label>
                 <input className="form-control" type="email" name="email" defaultValue={email} onBlur={handleChange}></input>
             </div>
-            <div key={setFormState.message}>
+            <div key='userMessage'>
                 <label htmlFor="message">Your Message:</label>
                 <textarea className="form-control" name="message" rows="4" defaultValue={message} onBlur={handleChange}/>
             </div>
