@@ -13,7 +13,7 @@ function Contact() {
     const [confirmationMessage, setConfirmationMessage] = useState('');
     
     const clearForm = () => {
-        setFormState({...formState, name: '', email: '', message: ''});
+        setFormState({ name: '', email: '', message: '' });
     }
 
     function handleChange(e) {
@@ -54,16 +54,16 @@ function Contact() {
                 }
             }).then((response) => {
                 if(response.data.status === 'success') {
-                    alert('Message Sent!')
+                    alert('Message Sent!');
+                    setConfirmationMessage('Message Sent!');
                 } else if (response.data.status === 'fail') {
-                    alert('Message Failed to send.')
-                } 
+                    alert('Message Failed to send.');
+                    setConfirmationMessage('Failed to send message.');
+                }
             })
         } catch (error) {
             console.log(error);
         }
-
-        clearForm();
     }
 
     return(
@@ -85,6 +85,11 @@ function Contact() {
             {errorMessage && (
                 <div>
                     <p className="error-text">{errorMessage}</p>
+                </div>
+            )}
+            {confirmationMessage && (
+                <div>
+                    <p className="error-text">{confirmationMessage}</p>
                 </div>
             )}
             <button type="submit" className="btn btn-secondary contact-btn">Send</button>
