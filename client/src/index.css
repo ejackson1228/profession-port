@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 360px;
+  max-height: 300px;
+}
+
+.app-header {
+  background-color: antiquewhite;
+}
+
+.center-div {
+  text-align: center;
+}
+
+.profile-pic-div {
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  margin: 30px;
+  border: 5px solid maroon;
+}
+
+.profile-pic {
+  display: block;
+  padding-left: auto;
+  padding-right: auto;
+  width: auto;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.mynickname {
+  color: blue;
+  font-weight: bold;
+  
+}
+
+.aboutme{
+  background-color:antiquewhite;
+  color:black;
+  border-radius: 25px;
+}
+
+.about-header{
+  color: maroon;
+}
+
+.fav-quote, .quote-author {
+  color: maroon;
+}
+
+.quote-author{
+  margin-left: 125px;
+}
+
+
+.navigate-items {
+  background: none;
+	color: black;
+	border: none;
+	padding: 10px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  font-size: larger;
+}
+
+.heading{
+  color: black;
+  cursor: pointer;
+  margin: 10px;
+  padding: 5px;
+}
+
+.header-span {
+  color: maroon;
+}
+
+.contact {
+  background-color: antiquewhite;
+  border-radius: 7%;
+}
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  background-color: antiquewhite;
+}
+
+.contact-header{
+  margin: 25px;
+  padding: 25px;
+  font-size: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info {
+  margin: 20px;
+  padding: 30px;
+}
+
+.contact-btn {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.projects-div {
+  margin-top: 10px;
+  background-color: antiquewhite;
+}
+
+.projects {
+  margin: 30px;
+  padding: 15px;
+  background-color: lavender !important;
+}
+
+.repo-btn {
+  color: pink !important;
+  background-color: navy !important;
+  margin-right: 10px;
+}
+
+.app-btn {
+  color: pink !important;
+  background-color: navy !important;
+  margin-left: 10px;
+}
+
+.card-footer {
+  background: none !important;
+  border: none !important;
+  margin-left: 17px;
+}
+
+.resume {
+  background-color: antiquewhite;
+  text-align: center;
+  margin: 25px;
+  border-radius: 7px;
+}
+
+.lists {
+  text-align: center;
+}
+
+.prof-list, .cred-list {
+  list-style: none;
+}
+
+.resume-box {
+  margin: 25px;
+}
+
+.resume-download {
+  text-align: center;
+  background-color: lavender !important;
+  color: rgb(33, 31, 31) !important;
+}
+
+.resume-frame {
+  border: 5px solid lavender;
+}
+
+.error-text {
+  color: crimson;
+}
+
+.nav-active {
+  color: maroon;
+  border-radius: 25%;
+}
+
+.app-footer {
+  background-color: maroon;
+}
