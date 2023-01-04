@@ -1,6 +1,6 @@
  # <h1 align="center">React Portfolio</h1>
 
-<img src="public/images/Portfolio-Screenshot.jpg" alt="screenshot of my portfolio" />
+<img src="public/images/Portfolio_screenshot.jpg" alt="Deployed Portfolio" />
 <br>
 <br>
 
