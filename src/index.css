@@ -50,11 +50,11 @@ img {
   display: block;
   padding-left: auto;
   padding-right: auto;
-  width: auto;
-  height: 100%;
+  width: 120%;
+  height: 160%;
   margin-left: auto;
   margin-right: auto;
-  
+  zoom: 500%;
 }
 
 .mynickname {

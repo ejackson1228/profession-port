@@ -6,7 +6,7 @@ function About() {
         <div>
             <div className="center-div">
                 <div className="profile-pic-div">
-                    <img src={process.env.PUBLIC_URL + '/images/self-profile-pic.jpg'} alt='Me!' className="profile-pic"/>
+                    <img src={process.env.PUBLIC_URL + '/images/Profile_Pic@Ruth.jpg'} alt='Me!' className="profile-pic"/>
                 </div>
             </div>
             <div className="aboutme container">
