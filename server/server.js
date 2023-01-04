@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const router = express.Router();
+const path = require('path');
 
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
@@ -15,7 +15,16 @@ dotenv.config();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.use(cors()); //{origin: 'http://locahost:3000', credentials: true}
+app.use(cors());
+
+const publicPath = path.join(__dirname, '..', 'public');
+
+app.use(express.static(publicPath));
+
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(publicPath, 'index.html'));
+})
 
 app.post('/send', cors(), async(req, res) => {
     let message = req.body.message;
@@ -55,7 +64,7 @@ app.post('/send', cors(), async(req, res) => {
         <p>${message}</p>
         </div>
         `
-    }).then(console.log('Message Sent!'))
+    }).then(console.log('Sending Message...'))
 
 });
 

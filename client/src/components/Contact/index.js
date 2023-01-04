@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import { validateEmail } from '../../utils/helpers';
 import axios from 'axios';
+import config from "../../utils/config";
 
 function Contact() {
-    const formState = {
+    const [formState, setFormState] = useState({
         name: "",
         email: "",
         message: ""
-    }
-    const [ { name, email, message }, setFormState ] = useState(formState);
+    })
     const [errorMessage, setErrorMessage] = useState('');
     const [confirmationMessage, setConfirmationMessage] = useState('');
-    
-    const clearForm = () => {
-        setFormState({ name: '', email: '', message: '' });
-    }
 
     function handleChange(e) {
         if(e.target.name === 'email') {
@@ -41,30 +37,31 @@ function Contact() {
 
     
 
-    async function submitHandler(e) {
-        e.preventDefault();
-        try {
-            await axios({ 
+    function submitHandler(event) {
+        event.preventDefault();
+
+        async function sendToAxios() {
+                const promise = await axios({ 
                 method: "POST",
-                url: "http://127.0.0.1:3000/send",
+                url: `http://${config.SERVER_URI}/send`,
                 data: {
-                    name: name,
-                    email: email,
-                    message: message
-                }
-            }).then((response) => {
-                if(response.data.status === 'success') {
-                    alert('Message Sent!');
-                    setConfirmationMessage('Message Sent!');
-                } else if (response.data.status === 'fail') {
-                    alert('Message Failed to send.');
-                    setConfirmationMessage('Failed to send message.');
+                    name: formState.name,
+                    email: formState.email,
+                    message: formState.message
                 }
             })
-        } catch (error) {
-            console.log(error);
+
+            const dataPromise = promise.then((response) => { return response.status; });
+            console.log(dataPromise);
+            return dataPromise;
         }
-    }
+
+        sendToAxios().then(dataPromise => {
+            console.log(dataPromise);
+        });
+
+        setConfirmationMessage('Message Sent!')
+    };
 
     return(
        <div className="container col-md-3 contact">
@@ -72,15 +69,15 @@ function Contact() {
         <form id="contactform" className="contact-form" onSubmit={submitHandler}>
             <div className="form-group" key='username'>
                 <label htmlFor="name">Name:</label>
-                <input className="form-control" type="text" name="name" defaultValue={name} onBlur={handleChange}></input>
+                <input className="form-control" type="text" name="name" defaultValue={formState.name} onBlur={handleChange}></input>
             </div>
             <div className="form-group" key='userEmail'>
                 <label htmlFor="email">Email Address:</label>
-                <input className="form-control" type="email" name="email" defaultValue={email} onBlur={handleChange}></input>
+                <input className="form-control" type="email" name="email" defaultValue={formState.email} onBlur={handleChange}></input>
             </div>
             <div key='userMessage'>
                 <label htmlFor="message">Your Message:</label>
-                <textarea className="form-control" name="message" rows="4" defaultValue={message} onBlur={handleChange}/>
+                <textarea className="form-control" name="message" rows="4" defaultValue={formState.message} onBlur={handleChange}/>
             </div>
             {errorMessage && (
                 <div>
