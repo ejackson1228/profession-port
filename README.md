@@ -4,7 +4,7 @@
 <br>
 <br>
 
-Deployed Portfolio: https://ejackson1228.github.io/portfolio-prodigy/
+Deployed Portfolio: https://ejackson1228.github.io/profession-port/
 
 ## Description
 This application is my personal portfolio built with React.js. Here, you will find an about me, contact, portfolio, and resume section. Within these sections you will find all my credentials, highlighted projects, and a downloadable iframed resume. 
@@ -15,7 +15,7 @@ This application is my personal portfolio built with React.js. Here, you will fi
   - [Questions](#questions)
 
 ## Contributors
-React.js
+React.js, emailJS, react-toast
 
 ## Questions? Contact me:
 GitHub: https://github.com/ejackson1228/ <br>
