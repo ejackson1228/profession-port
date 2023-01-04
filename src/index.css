@@ -208,3 +208,8 @@ img {
 .app-footer {
   background-color: maroon;
 }
+
+#notifyToast {
+  background-image: linear-gradient(to bottom left, antiquewhite, maroon);
+  color: black;
+}
