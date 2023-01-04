@@ -35,7 +35,7 @@ function Contact() {
         }
     };
 
-    
+    ///// SCRAP CONTACT FORM FOR EMAIL OPENER AND PHONE NUMBER, ETC
 
     function submitHandler(event) {
         event.preventDefault();
@@ -63,36 +63,60 @@ function Contact() {
         setConfirmationMessage('Message Sent!')
     };
 
-    return(
-       <div className="container col-md-3 contact">
+    return (
+      <div className="container col-md-3 contact">
         <h2 className="contact-header">Contact Me!</h2>
-        <form id="contactform" className="contact-form" onSubmit={submitHandler}>
-            <div className="form-group" key='username'>
-                <label htmlFor="name">Name:</label>
-                <input className="form-control" type="text" name="name" defaultValue={formState.name} onBlur={handleChange}></input>
+        <form
+          id="contactform"
+          className="contact-form"
+          onSubmit={submitHandler}
+        >
+          <div className="form-group" key="username">
+            <label htmlFor="name">Name:</label>
+            <input
+              className="form-control"
+              type="text"
+              name="name"
+              defaultValue={formState.name}
+              onBlur={handleChange}
+            ></input>
+          </div>
+          <div className="form-group" key="userEmail">
+            <label htmlFor="email">Email Address:</label>
+            <input
+              className="form-control"
+              type="email"
+              name="email"
+              defaultValue={formState.email}
+              onBlur={handleChange}
+            ></input>
+          </div>
+          <div key="userMessage">
+            <label htmlFor="message">Your Message:</label>
+            <textarea
+              className="form-control"
+              name="message"
+              rows="4"
+              defaultValue={formState.message}
+              onBlur={handleChange}
+            />
+          </div>
+          {errorMessage && (
+            <div>
+              <p className="error-text">{errorMessage}</p>
             </div>
-            <div className="form-group" key='userEmail'>
-                <label htmlFor="email">Email Address:</label>
-                <input className="form-control" type="email" name="email" defaultValue={formState.email} onBlur={handleChange}></input>
+          )}
+          {confirmationMessage && (
+            <div>
+              <p className="error-text">{confirmationMessage}</p>
             </div>
-            <div key='userMessage'>
-                <label htmlFor="message">Your Message:</label>
-                <textarea className="form-control" name="message" rows="4" defaultValue={formState.message} onBlur={handleChange}/>
-            </div>
-            {errorMessage && (
-                <div>
-                    <p className="error-text">{errorMessage}</p>
-                </div>
-            )}
-            {confirmationMessage && (
-                <div>
-                    <p className="error-text">{confirmationMessage}</p>
-                </div>
-            )}
-            <button type="submit" className="btn btn-secondary contact-btn">Send</button>
+          )}
+          <button type="submit" className="btn btn-secondary contact-btn">
+            Send
+          </button>
         </form>
-       </div>
-    )
+      </div>
+    );
 };
 
 export default Contact;
