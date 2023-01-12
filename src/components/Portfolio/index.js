@@ -12,7 +12,7 @@ const projects = [
     {
         id: 1,
         title: 'Weather Wonder',
-        image: '/images/weather-wonder-screenshot.jpg',
+        image: '/images/weather-wonder-ss.jpg',
         description: 'A weather app that allows users to view current & upcoming weather conditions for an area. Weather details include: Temperature, Humidity, Wind Speed, and UV Index.',
         repo: 'https://github.com/ejackson1228/weather-wonder',
         app: 'https://ejackson1228.github.io/weather-wonder/'
