@@ -3,7 +3,7 @@ import React from "react";
 function About() {
 
     return(
-        <div>
+        <div className="about-page">
             <div className="center-div">
                 <div className="profile-pic-div">
                     <img src={process.env.PUBLIC_URL + '/images/Profile_Pic@Ruth.jpg'} alt='Me!' className="profile-pic"/>
@@ -11,7 +11,7 @@ function About() {
             </div>
             <div className="aboutme container">
                 <h2 className="about-header">Welcome! My name is Elijah!</h2>
-                <p className="about-business">Thank you for visiting my portfolio website! Here you will find my portfolio of projects as well as a downloadable resume.
+                <p className="about-text">Thank you for visiting my portfolio website! Here you will find my portfolio of projects as well as a downloadable resume.
                 Just a bit about me, myself, and I: 
                 <br/>
                 <br/>
@@ -25,7 +25,7 @@ function About() {
                 If you believe I am an eligible candidate for your business, please contact me via the Contact tab in the navigation bar above.</p>
                 
                 
-                <p className="about-personal">Whenever I am not honing my development skills, you can find me amongst my cats, spending time with my partner, playing Pokémon, or having an adventure in life!
+                <p className="about-text">Whenever I am not honing my development skills, you can find me amongst my cats, spending time with my partner, playing Pokémon, or having an adventure in life!
                 Speaking of life, it is a wonderful yet troublesome thing. Life is full of successes and faliures. 
                 While it may not be possible to master life, there are opportunities waiting for everyone out there and I intend to take advantage of mine! 
                 I will end this introduction with one of my favorite quotes that keeps me going through tough times and failure: 

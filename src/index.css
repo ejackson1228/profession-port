@@ -12,10 +12,13 @@ code {
     monospace;
 }
 
+.root-page {
+  background-color: antiquewhite;
+}
+
 footer {
   position: relative;
-  left: 0;
-  bottom: 0;
+  padding: 20px;
   width: 100%;
   height: auto;
 }
@@ -63,6 +66,10 @@ img {
   
 }
 
+.about-page {
+  background-color: antiquewhite;
+}
+
 .aboutme{
   background-color:antiquewhite;
   color:black;
@@ -71,6 +78,11 @@ img {
 
 .about-header{
   color: maroon;
+  text-align: center;
+}
+
+.about-text {
+  text-align: center;
 }
 
 .fav-quote, .quote-author {
@@ -79,6 +91,8 @@ img {
 
 .quote-author{
   margin-left: 125px;
+  margin-bottom: 0px;
+  padding-bottom: 8px;
 }
 
 
@@ -105,7 +119,7 @@ img {
 }
 
 .contact {
-  background-color: antiquewhite;
+  background-color: rgb(243, 226, 203);
   border-radius: 7%;
 }
 
@@ -117,8 +131,7 @@ img {
 }
 
 .contact-header{
-  margin: 25px;
-  padding: 25px;
+  padding: 30px;
   margin-left: 30px;
   font-size: 40px;
 }
@@ -137,6 +150,9 @@ img {
 .contact-btn {
   margin-bottom: 25px;
   margin-top: 25px;
+  background-color: maroon !important;
+  color:  rgb(243, 226, 203) !important;
+  border-style: none !important;
 }
 
 .projects-div {
@@ -147,7 +163,8 @@ img {
 .projects {
   margin: 30px;
   padding: 15px;
-  background-color: lavender !important;
+  background-color:  rgb(243, 226, 203) !important;
+  border: none !important;
 }
 
 .project-skills {
@@ -155,14 +172,14 @@ img {
 }
 
 .repo-btn {
-  color: pink !important;
-  background-color: navy !important;
+  color: rgb(243, 226, 203) !important;
+  background-color: maroon !important;
   margin-right: 10px;
 }
 
 .app-btn {
-  color: pink !important;
-  background-color: navy !important;
+  color: rgb(243, 226, 203) !important;
+  background-color: maroon !important;
   margin-left: 10px;
 }
 
@@ -175,7 +192,6 @@ img {
 .resume {
   background-color: antiquewhite;
   text-align: center;
-  margin: 25px;
   border-radius: 7px;
 }
 
@@ -196,18 +212,15 @@ img {
   color: rgb(14, 163, 222);
 }
 
-.resume-box {
-  margin: 25px;
-}
-
 .resume-download {
   text-align: center;
-  background-color: lavender !important;
+  background-color: rgb(245, 211, 193) !important;
   color: rgb(33, 31, 31) !important;
+  border: none !important;
 }
 
 .resume-frame {
-  border: 5px solid lavender;
+  border: 5px solid rgb(245, 211, 193);
 }
 
 .error-text {
@@ -216,7 +229,8 @@ img {
 
 .nav-active {
   color: maroon;
-  border-radius: 25%;
+  border-radius: 10%;
+  background-image: linear-gradient(to bottom right, rgba(128, 0, 0, 0), rgb(245, 211, 193) );
 }
 
 .app-footer {
@@ -234,6 +248,5 @@ img {
   justify-content: center;
   text-decoration: none;
   color: maroon;
-  margin-top: -50px;
-  margin-right: 3px;
+  margin-top: -25px;
 }

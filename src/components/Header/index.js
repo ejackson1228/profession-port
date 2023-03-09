@@ -33,7 +33,7 @@ function Header() {
             setCurrentPage = {setCurrentPage}
             />
         </div>
-        <main className="">
+        <main className="root-page">
             <div>{switchPage(currentPage)}</div>
         </main>
     </div>

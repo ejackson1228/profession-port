@@ -15,7 +15,7 @@ function Nav(props) {
           <button
             className={`navigate-items ${props.currentPage === page && 'nav-active'}`}
             key={page}  >
-            <span
+            <span className="gradient-underline"
               onClick={() => {
                 props.setCurrentPage(page);
               }}    >
