@@ -12,7 +12,7 @@ function Footer() {
         <footer className="app-footer text-center text-white">
             <div className="container p-4">
                 <section className="social-media mb-4">
-                    <a className="linkedin btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/elijah-jackson-48045423b/">
+                    <a className="linkedin btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/ejackson1228/">
                         <FontAwesomeIcon icon={['fab', 'linkedin']} />
                     </a>
                     <a className="github btn btn-outline-light btn-floating m-1" href="https://github.com/ejackson1228">

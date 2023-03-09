@@ -55,6 +55,7 @@ function Contact() {
     return (
       <div className="container col-md-3 contact">
         <h2 className="contact-header">Contact Me!</h2>
+        <a href='mailto:ejackson1228@gmail.com' className='my-email'> 📩 Sending to: ejackson1228@gmail.com 📩</a>
         <form
           id="contactform"
           className="contact-form"
