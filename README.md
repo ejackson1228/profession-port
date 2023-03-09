@@ -18,6 +18,7 @@ Deployed with gh-pages.
 * [Bootstrap](https://getbootstrap.com/)
 * [React-toastify](https://fkhadra.github.io/react-toastify/introduction)
 * [emailjs](https://www.emailjs.com/)
+* [FontAwesome](https://fontawesome.com/)
 ## Authors
 
 * **Elijah Jackson** - [ejackson1228](https://github.com/ejackson1228)
